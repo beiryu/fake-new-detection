@@ -68,4 +68,8 @@ def main():
         st.write('Result: ', class_name[result])    
 
 if __name__ == "__main__":
-    main()
+    try:
+    	main()
+    except:
+    	pass
+    	
