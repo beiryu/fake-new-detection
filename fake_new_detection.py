@@ -14,11 +14,11 @@ import pandas as pd
 
 # interface
 st.title('Vietnamese fake news detector')
-image = Image.open('./output.png')
+image = Image.open('./data/output.png')
 st.image(image)
 form = st.form(key='my_form')
 text_input = form.text_input('Insert a piece of news here')
-option = form.selectbox('Choose your model', ('Long short-term memory', 'Logistic Regression'))
+option = form.selectbox('Choose your model', ('Logistic Regression', 'Long short-term memory'))
 submit_button = form.form_submit_button('Predict')
 
 # function
@@ -41,9 +41,8 @@ def pred(x):
     else:
         return 0
 
-# get params and predict
 def main():
-    X_df = pd.read_csv('X_df.csv')
+    X_df = pd.read_csv('./data/X_df.csv')
     class_name = ["Fake news", "Real news"]
 
     if option == 'Logistic Regression':
@@ -69,7 +68,4 @@ def main():
         st.write('Result: ', class_name[result])    
 
 if __name__ == "__main__":
-    try:
-        main()
-    except:
-        pass
+    main()
