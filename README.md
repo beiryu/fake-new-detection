@@ -16,3 +16,4 @@ Tin giả đang là một vấn đề nhức nhối của xã hội, đặc bi�
 
 3. Deploy mô hình
 - Thư viện: [Streamlit](https://streamlit.io/gallery) cho phép code giao diện một cách đơn giản hoàn toàn bằng Python để hỗ trợ deploy mô hình máy học lên web miễn phí, phục vụ việc demo.
+- [Demo](https://share.streamlit.io/beiryu/fake_new/main/fake_new_detection.py)
