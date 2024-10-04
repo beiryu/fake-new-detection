@@ -1,19 +1,62 @@
-# Fake news detection
+# Fake News Detection for Vietnamese Text
 
-## Tổng quan
+## Overview
 
-Tin giả đang là một vấn đề nhức nhối của xã hội, đặc biệt trong thời đại bùng nổ thông tin hiện nay. Đồ án này sẽ cho phép các bạn làm việc với dữ liệu văn bản tiếng Việt, xây dựng mô hình dự đoán tin giả và deploy mô hình này lên một trang web đơn giản.
+This project addresses the critical issue of fake news in the era of information overload. It focuses on working with Vietnamese text data to build a fake news prediction model and deploy it on a simple web application.
 
-1. Nguồn dữ liệu
-- [VNFD Dataset](https://github.com/thanhhocse96/vfnd-vietnamese-fake-news-datasets/blob/master/CSV/vn_news_223_tdlfr.csv), tập dữ liệu 223 record bản tin tiếng Việt, gồm 2 nhãn: 1 (tin giả) và 0 (tin thật).
-- Mô tả dữ liệu: [Mô tả tập VNFD](https://github.com/thanhhocse96/vfnd-vietnamese-fake-news-datasets/tree/master/CSV).
- 
-2. Tiền xử lý văn bản tiếng Việt
-- Các bước tiền xử lý văn bản cơ bản gồm: lowercase, loại stopwords, stemming, normalize tùy theo từng lĩnh vực, loại noise (HTML tag, các ký hiệu đặc biệt như @, #,...), dấu câu.
-- [Sơ lược về tiền xử lý văn bản](https://maelfabien.github.io/machinelearning/NLP_1/#i-what-is-preprocessing)
-- [Stopword](https://github.com/stopwords/vietnamese-stopwords/blob/master/vietnamese-stopwords.txt)
-- [Tokenizer](https://github.com/vncorenlp/VnCoreNLP#install)
+## Features
 
-3. Deploy mô hình
-- Thư viện: [Streamlit](https://streamlit.io/gallery) cho phép code giao diện một cách đơn giản hoàn toàn bằng Python để hỗ trợ deploy mô hình máy học lên web miễn phí, phục vụ việc demo.
-- [Demo](https://share.streamlit.io/beiryu/fake_new/main/fake_new_detection.py)
+- Process and analyze Vietnamese text data
+- Build a machine learning model to predict fake news
+- Deploy the model on a web application for easy demonstration
+
+## Data Source
+
+We use the [VNFD Dataset](https://github.com/thanhhocse96/vfnd-vietnamese-fake-news-datasets/blob/master/CSV/vn_news_223_tdlfr.csv), which contains:
+- 223 Vietnamese news records
+- Binary labels: 1 (fake news) and 0 (real news)
+
+For detailed dataset information, see the [VNFD Dataset Description](https://github.com/thanhhocse96/vfnd-vietnamese-fake-news-datasets/tree/master/CSV).
+
+## Text Preprocessing
+
+Our preprocessing pipeline includes:
+1. Lowercase conversion
+2. Stopword removal
+3. Stemming
+4. Domain-specific normalization
+5. Noise removal (HTML tags, special characters, punctuation)
+
+Resources:
+- [Text Preprocessing Overview](https://maelfabien.github.io/machinelearning/NLP_1/#i-what-is-preprocessing)
+- [Vietnamese Stopwords](https://github.com/stopwords/vietnamese-stopwords/blob/master/vietnamese-stopwords.txt)
+- [VnCoreNLP Tokenizer](https://github.com/vncorenlp/VnCoreNLP#install)
+
+## Model Deployment
+
+We use [Streamlit](https://streamlit.io/gallery) to create a simple web interface for our model, allowing for free deployment and easy demonstration.
+
+[Live Demo](https://share.streamlit.io/beiryu/fake_new/main/fake_new_detection.py)
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+[Add instructions on how to run the project locally]
+
+## Contributing
+
+[Add contribution guidelines here]
+
+## License
+
+[Add license information here]
+
+## Acknowledgements
+
+- [VNFD Dataset creators](https://github.com/thanhhocse96/vfnd-vietnamese-fake-news-datasets)
+- [Streamlit](https://streamlit.io/) for the web application framework
